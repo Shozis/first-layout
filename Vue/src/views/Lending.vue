@@ -55,18 +55,24 @@
                     <img class="wrapper-cards-interactive-logo" src="../components/icons/Lev_Haolam.png" alt="">
                     <div class="wrapper-cards-interactive-li">
                         <ul class="wrapper-cards-interactive-li-first">
-                            <li class="wrapper-cards-interactive-li-first-el">Result:</li>
-                            <li class="wrapper-cards-interactive-li-first-el">Type:</li>
-                            <li class="wrapper-cards-interactive-li-first-el">Company:</li>
-                            <li class="wrapper-cards-interactive-li-first-el">Product:</li>
-                            <li class="wrapper-cards-interactive-li-first-el">Platform:</li>
+                            <li class="wrapper-cards-interactive-li-first-el1">Result:</li>
+                            <li class="wrapper-cards-interactive-li-first-el2">$20K per email campaign</li>
                         </ul>
                         <ul class="wrapper-cards-interactive-li-second">
-                            <li class="wrapper-cards-interactive-li-second-el">$20K per email campaign</li>
-                            <li class="wrapper-cards-interactive-li-second-el-other">Subscription e-commerce</li>
-                            <li class="wrapper-cards-interactive-li-second-el-other">Lev Haolam</li>
-                            <li class="wrapper-cards-interactive-li-second-el-other">Handmade gifts from Israel</li>
-                            <li class="wrapper-cards-interactive-li-second-el-other">Klaviyo</li>
+                            <li class="wrapper-cards-interactive-li-second-el1">Type:</li>
+                            <li class="wrapper-cards-interactive-li-second-el2">Subscription e-commerce</li>
+                        </ul>
+                        <ul class="wrapper-cards-interactive-li-third">
+                            <li class="wrapper-cards-interactive-li-third-el1">Company:</li>
+                            <li class="wrapper-cards-interactive-li-third-el2">Lev Haolam</li>
+                        </ul>
+                        <ul class="wrapper-cards-interactive-li-fourth">
+                            <li class="wrapper-cards-interactive-li-fourth-el1">Product:</li>
+                            <li class="wrapper-cards-interactive-li-fourth-el2">Handmade gifts from Israel</li>
+                        </ul>
+                        <ul class="wrapper-cards-interactive-li-fifth">
+                            <li class="wrapper-cards-interactive-li-fifth-el1">Platform:</li>
+                            <li class="wrapper-cards-interactive-li-fifth-el2">Klaviyo</li>
                         </ul>
                     </div>
                     <button class="wrapper-cards-interactive-btn">Learn more</button>
@@ -144,6 +150,7 @@
                         </div>
                     </div>
                 </div>
+                <img class="wrapper-testimonials-img" src="../components/icons/part1.png" alt="">
             </div>
         </div>
         <div class="wrapper-last">
@@ -170,8 +177,10 @@
                         <h2 class="wrapper-last-panel-info-sub-title">
                             Subscribe to L.U.Y.E.
                         </h2>
-                        <input class="wrapper-last-panel-info-sub-search" type="text" placeholder="Your Email">
-                        <button class="wrapper-last-panel-info-sub-search-btn" type="submit">SUBSCRIBE</button>
+                        <div class="wrapper-last-panel-info-sub-search">
+                            <input class="wrapper-last-panel-info-sub-search-el" type="text" placeholder="Your Email">
+                            <button class="wrapper-last-panel-info-sub-search-btn" type="submit">SUBSCRIBE</button>
+                        </div>
                         <br>
                         <button class="wrapper-last-panel-info-sub-btn">Согласие на получение писем?</button>
                     </div>
@@ -368,37 +377,98 @@ import ButtonTransition from '../components/ButtonTransition.vue';
             &-logo {
                 width: 250px;
                 height: 92px;
-                margin: 0 0 10px 0;
+                margin-bottom: 30px;
                 top: 0;
 
             }
 
             &-li {
                 display: flex;
+                flex-direction: column;
 
                 &-first {
-                    color: #F5333F;
+                    display: flex;
                     padding: 0;
                     list-style: none;
 
-                    &-el {
-                        margin: 20px 0 0 0;
+                    &-el1 {
+                        width: 110px;
+                        color: #F5333F;
+                        font-size: 24px;
+                    }
+
+                    &-el2 {
+                        margin-left: 20px;
                         font-size: 24px;
                     }
                 }
 
                 &-second {
+                    display: flex;
+                    padding: 0;
+                    list-style: none;
+
+                    &-el1 {
+                        width: 110px;
+                        color: #F5333F;
+                        font-size: 24px;
+                    }
+
+                    &-el2 {
+                        margin-left: 20px;
+                        font-size: 24px;
+                    }
+                }
+
+                &-third {
+                    display: flex;
+                    padding: 0;
+                    list-style: none;
+
+                    &-el1 {
+                        width: 110px;
+                        color: #F5333F;
+                        font-size: 24px;
+                    }
+
+                    &-el2 {
+                        margin-left: 20px;
+                        font-size: 24px;
+                    }
+                }
+
+                &-fourth {
+                    display: flex;
+                    padding: 0;
                     margin: 25px 0;
                     list-style: none;
 
-                    &-el {
-                        margin: 10px 0 0 0;
+                    &-el1 {
+                        width: 110px;
+                        color: #F5333F;
                         font-size: 24px;
+                    }
 
-                        &-other {
-                            margin: 20px 0 0 0;
-                            font-size: 24px;
-                        }
+                    &-el2 {
+                        margin-left: 20px;
+                        font-size: 24px;
+                    }
+                }
+
+                &-fifth {
+                    display: flex;
+                    padding: 0;
+                    list-style: none;
+
+                    &-el1 {
+                        width: 110px;
+                        color: #F5333F;
+                        font-size: 24px;
+                    }
+
+                    &-el2 {
+                        margin-left: 20px;
+                        font-size: 24px;
                     }
                 }
             }
@@ -493,10 +563,15 @@ import ButtonTransition from '../components/ButtonTransition.vue';
     &-testimonials {
         position: relative;
         background-image: url(../components/icons/part1.png);
+        background-size: 50% 90%;
         background-repeat: no-repeat;
         background-position: right center;
         padding: 0 0 120px 0;
         border-bottom: 1px solid #d1d1d1;
+
+        &-img {
+            display: none;
+        }
 
         &-plates {
             width: 800px;
@@ -577,13 +652,19 @@ import ButtonTransition from '../components/ButtonTransition.vue';
     }
 
     &-last {
+        background-image: url("../components/icons/BGsecond.png");
+        background-size: 50% 100%;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         &-panel {
             display: flex;
             margin: 100px 55px 100px 60px;
             background-color: #212121;
             border-radius: 20px;
-            width: 1800px;
+            width: 95%;
 
             &-title {
                 width: 600px;
@@ -620,36 +701,35 @@ import ButtonTransition from '../components/ButtonTransition.vue';
                         color: #FFFFFF;
                     }
 
+
                     &-search {
-                        margin: 20px 0;
-                        padding: 0;
-                        width: 725px;
-                        height: 53px;
-                        font-size: 20px;
-                        border-style: none;
-                        border-top-left-radius: 5px;
-                        border-bottom-left-radius: 5px;
-                    }
+                        display: flex;
+                        align-items: center;
 
-                    &-search-btn {
-                        width: 165px;
-                        height: 53px;
-                        font-size: 20px;
-                        color: #FFFFFF;
-                        background-color: #F5333F;
-                        border-style: none;
-                        border-top-right-radius: 5px;
-                        border-bottom-right-radius: 5px;
-                    }
+                        &-el {
+                            margin: 20px 0;
+                            padding: 0 40% 0 0;
+                            width: 100%;
+                            height: 53px;
+                            justify-content: start;
+                            font-size: 20px;
+                            position: relative;
+                            border-style: none;
+                            border-top-left-radius: 5px;
+                            border-bottom-left-radius: 5px;
+                        }
 
+                        &-btn {
+                            width: 100%;
+                            height: 53px;
+                            font-size: 20px;
+                            color: #FFFFFF;
+                            background-color: #F5333F;
+                            border-style: none;
+                            border-top-right-radius: 5px;
+                            border-bottom-right-radius: 5px;
+                        }
 
-                    &-btn {
-
-                        font-size: 20px;
-                        padding: 0;
-                        color: #C2C2C2;
-                        background: none;
-                        border-style: none;
                     }
                 }
             }
@@ -732,11 +812,24 @@ import ButtonTransition from '../components/ButtonTransition.vue';
                     list-style: none;
                     right: 0;
 
-
-                    &-el {
-                        
-                    }
                 }
+            }
+        }
+    }
+}
+
+@media (max-width:1560px) {
+    .wrapper {
+        &-line-logo {
+            display: flex;
+        }
+
+        &-testimonials {
+            background: none;
+
+            &-img {
+                display: block;
+                margin: 50px 0 0 0;
             }
         }
     }

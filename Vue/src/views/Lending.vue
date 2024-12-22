@@ -893,15 +893,6 @@ import ButtonTransition from '../components/ButtonTransition.vue';
             &-panel {
                 flex-direction: column;
 
-                &-info {
-
-                    &-sub {
-
-                        &-search {
-
-                        }
-                    }
-                }
             }
         }
 
@@ -910,11 +901,6 @@ import ButtonTransition from '../components/ButtonTransition.vue';
             &-all{
                 flex-direction: column;
 
-                &-logos {
-
-                    &-mess{
-                    }
-                }
 
                 &-strings{
                     flex-direction: column;

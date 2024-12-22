@@ -105,7 +105,8 @@
                         email <br> marketing team, ensuring revenue from emails at a fraction <br> of in-house costs.
                         Discover how it works!
                     </span>
-                    <hr style="height: 100px; width: 0; border-color: #FFFFFF;">
+                    <hr class="wrapper-care-panel-texts-stick1" style="height: 100px; width: 0; border-color: #FFFFFF;">
+                    <hr class="wrapper-care-panel-texts-stick2">
                     <span class="wrapper-care-panel-texts-second">
                         <span style="color: #F5333F;">For email marketers at larger companies</span>, we enhance your
                         <br> productivity by handling execution, allowing you to focus on <br> strategy. Learn why we
@@ -293,6 +294,7 @@ import ButtonTransition from '../components/ButtonTransition.vue';
         display: flex;
         justify-content: space-around;
         align-items: center;
+        flex-wrap: wrap;
 
         // Палочка вверху - палочка внизу
         border-top: 1px solid #d1d1d1;
@@ -358,15 +360,15 @@ import ButtonTransition from '../components/ButtonTransition.vue';
     }
 
     &-cards {
+        width: 100%;
         display: flex;
-
-        // background-image: url("../components/icons/BGthird.png");
         // background-size: 50%;
         // background-repeat: no-repeat;
         // transform: rotate(30deg);
         // opacity: 10%;
 
         &-img {
+            width: 100%;
             margin: 100px 155px 100px 60px;
         }
 
@@ -496,7 +498,6 @@ import ButtonTransition from '../components/ButtonTransition.vue';
 
     &-care {
         display: flex;
-        background-image: url("../components/icons/BGsecond.png");
         background-size: 50% 100%;
         background-repeat: no-repeat;
         justify-content: center;
@@ -550,6 +551,10 @@ import ButtonTransition from '../components/ButtonTransition.vue';
                 &-first {
                     color: #FFFFFF;
                     font-size: 24px;
+                }
+
+                &-stick2 {
+                    display: none;
                 }
 
                 &-second {
@@ -685,7 +690,6 @@ import ButtonTransition from '../components/ButtonTransition.vue';
             }
 
             &-info {
-                width: 900px;
                 margin: 100px 80px;
 
                 &-text {
@@ -703,6 +707,7 @@ import ButtonTransition from '../components/ButtonTransition.vue';
 
 
                     &-search {
+                        width: 100%;
                         display: flex;
                         align-items: center;
 
@@ -713,7 +718,6 @@ import ButtonTransition from '../components/ButtonTransition.vue';
                             height: 53px;
                             justify-content: start;
                             font-size: 20px;
-                            position: relative;
                             border-style: none;
                             border-top-left-radius: 5px;
                             border-bottom-left-radius: 5px;
@@ -729,7 +733,12 @@ import ButtonTransition from '../components/ButtonTransition.vue';
                             border-top-right-radius: 5px;
                             border-bottom-right-radius: 5px;
                         }
+                    }
 
+                    &-btn {
+                        background: none;
+                        border: none;
+                        color: #C2C2C2;
                     }
                 }
             }
@@ -737,17 +746,19 @@ import ButtonTransition from '../components/ButtonTransition.vue';
     }
 
     &-footer {
+        width: 100%;
         display: flex;
         background-color: #212121;
+        padding: 80px 60px;
+
 
         &-all {
-            position: relative;
             display: flex;
-            width: 1800px;
-            margin: 80px 60px;
+            justify-content: space-around;
 
             &-strings {
                 display: flex;
+                width: 100%;
 
 
                 &-logo {
@@ -802,26 +813,67 @@ import ButtonTransition from '../components/ButtonTransition.vue';
             }
 
             &-logos {
+                margin-left: 20%;
 
                 &-mess {
                     display: flex;
                     width: 200px;
-                    position: absolute;
-                    justify-content: space-between;
                     padding: 0;
+                    margin: 0;
+                    justify-content: space-between;
                     list-style: none;
-                    right: 0;
-
+                    
                 }
             }
         }
     }
 }
 
+
 @media (max-width:1560px) {
     .wrapper {
+
         &-line-logo {
             display: flex;
+            white-space: pre-line;
+        }
+
+        &-cards {
+            justify-content: space-between;
+            flex-direction: column;
+            margin: 30px 20px;
+
+            &-img {
+                margin-bottom: 20px;
+            }
+
+            &-interactive {
+                margin: 0;
+                margin-bottom: 20px;
+            }
+        }
+
+        &-care {
+
+            &-panel {
+
+                &-texts {
+                    display: flex;
+                    flex-direction: column;
+
+                    &-stick1 {
+                        display: none;
+                    }
+
+                    &-stick2 {
+                        display: block;
+                        width: 100%;
+                        height: 0;
+                        margin: 20px 0;
+                        border-color: #FFFFFF
+                    }
+                }
+            }
         }
 
         &-testimonials {
@@ -830,6 +882,47 @@ import ButtonTransition from '../components/ButtonTransition.vue';
             &-img {
                 display: block;
                 margin: 50px 0 0 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .wrapper {
+        &-last {
+            &-panel {
+                flex-direction: column;
+
+                &-info {
+
+                    &-sub {
+
+                        &-search {
+
+                        }
+                    }
+                }
+            }
+        }
+
+        &-footer{
+
+            &-all{
+                flex-direction: column;
+
+                &-logos {
+
+                    &-mess{
+                    }
+                }
+
+                &-strings{
+                    flex-direction: column;
+
+                    &-text{
+                        margin: 0;
+                    }
+                }
             }
         }
     }

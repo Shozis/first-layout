@@ -47,39 +47,39 @@
             </div>
         </div>
         <div class="wrapper-cards">
-            <div>
-                <img class="wrapper-cards-img" src="../components/icons/cards.png" alt="#">
-            </div>
+            <img class="wrapper-cards-img" src="../components/icons/cards.png" alt="#">
             <div class="wrapper-cards-interactive">
-                <div>
-                    <img class="wrapper-cards-interactive-logo" src="../components/icons/Lev_Haolam.png" alt="">
-                    <div class="wrapper-cards-interactive-li">
-                        <ul class="wrapper-cards-interactive-li-first">
-                            <li class="wrapper-cards-interactive-li-first-el1">Result:</li>
-                            <li class="wrapper-cards-interactive-li-first-el2">$20K per email campaign</li>
+                <div class="wrapper-cards-interactive-info">
+                    <img class="wrapper-cards-interactive-info-logo" src="../components/icons/Lev_Haolam.png" alt="">
+                    <div class="wrapper-cards-interactive-info-li">
+                        <ul class="wrapper-cards-interactive-info-li-first">
+                            <li class="wrapper-cards-interactive-info-li-first-el1">Result:</li>
+                            <li class="wrapper-cards-interactive-info-li-first-el2">$20K per email campaign</li>
                         </ul>
-                        <ul class="wrapper-cards-interactive-li-second">
-                            <li class="wrapper-cards-interactive-li-second-el1">Type:</li>
-                            <li class="wrapper-cards-interactive-li-second-el2">Subscription e-commerce</li>
+                        <ul class="wrapper-cards-interactive-info-li-second">
+                            <li class="wrapper-cards-interactive-info-li-second-el1">Type:</li>
+                            <li class="wrapper-cards-interactive-info-li-second-el2">Subscription e-commerce</li>
                         </ul>
-                        <ul class="wrapper-cards-interactive-li-third">
-                            <li class="wrapper-cards-interactive-li-third-el1">Company:</li>
-                            <li class="wrapper-cards-interactive-li-third-el2">Lev Haolam</li>
+                        <ul class="wrapper-cards-interactive-info-li-third">
+                            <li class="wrapper-cards-interactive-info-li-third-el1">Company:</li>
+                            <li class="wrapper-cards-interactive-info-li-third-el2">Lev Haolam</li>
                         </ul>
-                        <ul class="wrapper-cards-interactive-li-fourth">
-                            <li class="wrapper-cards-interactive-li-fourth-el1">Product:</li>
-                            <li class="wrapper-cards-interactive-li-fourth-el2">Handmade gifts from Israel</li>
+                        <ul class="wrapper-cards-interactive-info-li-fourth">
+                            <li class="wrapper-cards-interactive-info-li-fourth-el1">Product:</li>
+                            <li class="wrapper-cards-interactive-info-li-fourth-el2">Handmade gifts from Israel</li>
                         </ul>
-                        <ul class="wrapper-cards-interactive-li-fifth">
-                            <li class="wrapper-cards-interactive-li-fifth-el1">Platform:</li>
-                            <li class="wrapper-cards-interactive-li-fifth-el2">Klaviyo</li>
+                        <ul class="wrapper-cards-interactive-info-li-fifth">
+                            <li class="wrapper-cards-interactive-info-li-fifth-el1">Platform:</li>
+                            <li class="wrapper-cards-interactive-info-li-fifth-el2">Klaviyo</li>
                         </ul>
                     </div>
-                    <button class="wrapper-cards-interactive-btn">Learn more</button>
-                </div>
-                <div class="wrapper-cards-interactive-swap">
-                    <img class="wrapper-cards-interactive-swap-left" src="../components/icons/left_btn.svg" alt="">
-                    <img class="wrapper-cards-interactive-swap-right" src="../components/icons/right_btn.svg" alt="">
+                    <button class="wrapper-cards-interactive-info-btn">Learn more</button>
+                    <div class="wrapper-cards-interactive-info-swap">
+                        <img class="wrapper-cards-interactive-info-swap-left" src="../components/icons/left_btn.svg"
+                            alt="">
+                        <img class="wrapper-cards-interactive-info-swap-right" src="../components/icons/right_btn.svg"
+                            alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -247,7 +247,6 @@ import ButtonTransition from '../components/ButtonTransition.vue';
                     min-width: 150px;
                 }
             }
-
         }
 
         &-btn {
@@ -299,12 +298,12 @@ import ButtonTransition from '../components/ButtonTransition.vue';
         // Палочка вверху - палочка внизу
         border-top: 1px solid #d1d1d1;
         border-bottom: 1px solid #d1d1d1;
-
         padding-top: 40px;
         padding-bottom: 40px;
 
         &-img {
-            width: 180px;
+            margin: 0 20px;
+            max-width: 180px;
             height: 66.72px;
             justify-content: space-between;
         }
@@ -321,7 +320,7 @@ import ButtonTransition from '../components/ButtonTransition.vue';
 
         &-panel {
             display: flex;
-            width: 1800px;
+            width: 95%;
             margin: 100px 80px;
             justify-content: space-between;
             align-items: center;
@@ -351,7 +350,6 @@ import ButtonTransition from '../components/ButtonTransition.vue';
                     //     content: '\2022';
                     //     color: red;
                     //     font-size: 30px;
-
                     // }
                 }
             }
@@ -360,140 +358,135 @@ import ButtonTransition from '../components/ButtonTransition.vue';
     }
 
     &-cards {
-        width: 100%;
         display: flex;
-        // background-size: 50%;
-        // background-repeat: no-repeat;
-        // transform: rotate(30deg);
-        // opacity: 10%;
-
-        &-img {
-            width: 100%;
-            margin: 100px 155px 100px 60px;
-        }
+        padding: 100px 60px;
 
         &-interactive {
-            margin: 250px 0 250px 20px;
-            left: 20px;
+            margin-left: 20px;
 
-            &-logo {
-                width: 250px;
-                height: 92px;
-                margin-bottom: 30px;
-                top: 0;
-
-            }
-
-            &-li {
+            &-info {
                 display: flex;
+                justify-content: center;
                 flex-direction: column;
 
-                &-first {
-                    display: flex;
-                    padding: 0;
-                    list-style: none;
+                &-logo {
+                    width: 250px;
+                    height: 92px;
+                    margin-bottom: 30px;
+                    top: 0;
 
-                    &-el1 {
-                        width: 110px;
-                        color: #F5333F;
-                        font-size: 24px;
+                }
+
+                &-li {
+                    display: flex;
+                    flex-direction: column;
+
+                    &-first {
+                        display: flex;
+                        padding: 0;
+                        list-style: none;
+
+                        &-el1 {
+                            width: 110px;
+                            color: #F5333F;
+                            font-size: 24px;
+                        }
+
+                        &-el2 {
+                            margin-left: 20px;
+                            font-size: 24px;
+                        }
                     }
 
-                    &-el2 {
-                        margin-left: 20px;
-                        font-size: 24px;
+                    &-second {
+                        display: flex;
+                        padding: 0;
+                        list-style: none;
+
+                        &-el1 {
+                            width: 110px;
+                            color: #F5333F;
+                            font-size: 24px;
+                        }
+
+                        &-el2 {
+                            margin-left: 20px;
+                            font-size: 24px;
+                        }
+                    }
+
+                    &-third {
+                        display: flex;
+                        padding: 0;
+                        list-style: none;
+
+                        &-el1 {
+                            width: 110px;
+                            color: #F5333F;
+                            font-size: 24px;
+                        }
+
+                        &-el2 {
+                            margin-left: 20px;
+                            font-size: 24px;
+                        }
+                    }
+
+                    &-fourth {
+                        display: flex;
+                        padding: 0;
+                        margin: 25px 0;
+                        list-style: none;
+
+                        &-el1 {
+                            width: 110px;
+                            color: #F5333F;
+                            font-size: 24px;
+                        }
+
+                        &-el2 {
+                            margin-left: 20px;
+                            font-size: 24px;
+                        }
+                    }
+
+                    &-fifth {
+                        display: flex;
+                        padding: 0;
+                        list-style: none;
+
+                        &-el1 {
+                            width: 110px;
+                            color: #F5333F;
+                            font-size: 24px;
+                        }
+
+                        &-el2 {
+                            margin-left: 20px;
+                            font-size: 24px;
+                        }
                     }
                 }
 
-                &-second {
-                    display: flex;
-                    padding: 0;
-                    list-style: none;
-
-                    &-el1 {
-                        width: 110px;
-                        color: #F5333F;
-                        font-size: 24px;
-                    }
-
-                    &-el2 {
-                        margin-left: 20px;
-                        font-size: 24px;
-                    }
+                &-btn {
+                    width: 170px;
+                    padding: 10px 25px;
+                    margin: 5px 0 60px 0;
+                    background-color: #FFFFFF;
+                    color: #F5333F;
+                    border-color: #F5333F;
+                    border-radius: 5px;
+                    bottom: 0;
                 }
 
-                &-third {
+                &-swap {
                     display: flex;
-                    padding: 0;
-                    list-style: none;
-
-                    &-el1 {
-                        width: 110px;
-                        color: #F5333F;
-                        font-size: 24px;
-                    }
-
-                    &-el2 {
-                        margin-left: 20px;
-                        font-size: 24px;
-                    }
+                    justify-content: space-between;
+                    width: 140px;
+                    height: 40px;
                 }
-
-                &-fourth {
-                    display: flex;
-                    padding: 0;
-                    margin: 25px 0;
-                    list-style: none;
-
-                    &-el1 {
-                        width: 110px;
-                        color: #F5333F;
-                        font-size: 24px;
-                    }
-
-                    &-el2 {
-                        margin-left: 20px;
-                        font-size: 24px;
-                    }
-                }
-
-                &-fifth {
-                    display: flex;
-                    padding: 0;
-                    list-style: none;
-
-                    &-el1 {
-                        width: 110px;
-                        color: #F5333F;
-                        font-size: 24px;
-                    }
-
-                    &-el2 {
-                        margin-left: 20px;
-                        font-size: 24px;
-                    }
-                }
-            }
-
-            &-btn {
-                width: 170px;
-                padding: 10px 25px;
-                margin: 5px 0 60px 0;
-                background-color: #FFFFFF;
-                color: #F5333F;
-                border-color: #F5333F;
-                border-radius: 5px;
-                bottom: 0;
-            }
-
-            &-swap {
-                display: flex;
-                justify-content: space-between;
-                width: 140px;
-                height: 40px;
             }
         }
-
     }
 
     &-care {
@@ -509,7 +502,7 @@ import ButtonTransition from '../components/ButtonTransition.vue';
             margin: 100px 60px;
             background-color: #212121;
             border-radius: 20px;
-            width: 1800px;
+            width: 95%;
             // padding: 100px 80px 240px 80px;
 
             &-email {
@@ -568,7 +561,7 @@ import ButtonTransition from '../components/ButtonTransition.vue';
     &-testimonials {
         position: relative;
         background-image: url(../components/icons/part1.png);
-        background-size: 50% 90%;
+        background-size: 45% 85%;
         background-repeat: no-repeat;
         background-position: right center;
         padding: 0 0 120px 0;
@@ -705,7 +698,6 @@ import ButtonTransition from '../components/ButtonTransition.vue';
                         color: #FFFFFF;
                     }
 
-
                     &-search {
                         width: 100%;
                         display: flex;
@@ -746,20 +738,17 @@ import ButtonTransition from '../components/ButtonTransition.vue';
     }
 
     &-footer {
-        width: 100%;
         display: flex;
         background-color: #212121;
         padding: 80px 60px;
 
-
         &-all {
             display: flex;
-            justify-content: space-around;
+            width: 100%;
+            justify-content: space-between;
 
             &-strings {
                 display: flex;
-                width: 100%;
-
 
                 &-logo {
                     width: 255px;
@@ -813,7 +802,6 @@ import ButtonTransition from '../components/ButtonTransition.vue';
             }
 
             &-logos {
-                margin-left: 20%;
 
                 &-mess {
                     display: flex;
@@ -822,7 +810,7 @@ import ButtonTransition from '../components/ButtonTransition.vue';
                     margin: 0;
                     justify-content: space-between;
                     list-style: none;
-                    
+
                 }
             }
         }
@@ -832,11 +820,6 @@ import ButtonTransition from '../components/ButtonTransition.vue';
 
 @media (max-width:1560px) {
     .wrapper {
-
-        &-line-logo {
-            display: flex;
-            white-space: pre-line;
-        }
 
         &-cards {
             justify-content: space-between;
@@ -889,24 +872,71 @@ import ButtonTransition from '../components/ButtonTransition.vue';
 
 @media (max-width: 1300px) {
     .wrapper {
-        &-last {
-            &-panel {
-                flex-direction: column;
 
+        &-cards {
+            margin: 0;
+
+            &-img {
+                width: 90%;
             }
         }
 
-        &-footer{
+        &-care {
 
-            &-all{
-                flex-direction: column;
+            &-panel {
 
-
-                &-strings{
+                &-email {
+                    display: flex;
                     flex-direction: column;
 
                     &-text{
                         margin: 0;
+                    }
+
+                    &-li{
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+
+        &-last {
+
+            &-panel {
+                flex-direction: column;
+            }
+        }
+
+        &-footer {
+
+            &-all {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+
+                &-strings {
+                    flex-direction: column;
+
+                    &-text {
+                        display: flex;
+                        margin: 20px 0;
+                        flex-direction: column;
+                        align-items: center;
+
+                        &-list2 {
+                            display: flex;
+                            margin: 0;
+                            flex-direction: column;
+                            align-items: center;
+                        }
+
+                        &-list3 {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                        }
                     }
                 }
             }

@@ -11,7 +11,6 @@
         </div>
         <hr style="margin: 0;">
         <div class="wrapper-offer">
-            <hr>
             <div class="wrapper-offer-texts">
                 <span class="wrapper-offer-texts-big">
                     <span style="color: red;">BOOST</span>
@@ -120,34 +119,33 @@
                 <span class="wrapper-testimonials-plates-title">
                     Testimonials
                 </span>
-                <div class="wrapper-testimonials-plates-panel-f">
-                    <div class="wrapper-testimonials-plates-panel-f-bg">
-                        <img class="wrapper-testimonials-plates-panel-f-mark" src="../components/icons/marks.svg"
-                            alt="">
-                        <div class="wrapper-testimonials-plates-panel-f-bg-text">
-                            <span class="wrapper-testimonials-plates-panel-f-bg-text-first">
-                                You have ensured a systematic approach to our email strategy and helped <br> us
-                                streamline all chaotic thoughts and ideas we had about our emails!
-                            </span>
-                            <span class="wrapper-testimonials-plates-panel-f-bg-text-person">
-                                <span style="color: #F5333F;">Natalia Pereldik,</span> <br> CEO, Funexpected Games
-                            </span>
-                        </div>
+                <div class="wrapper-testimonials-plates-panels">
+                    <div class="wrapper-testimonials-plates-panels-f">
+                            <img class="wrapper-testimonials-plates-panels-f-mark" src="../components/icons/marks.svg"
+                                alt="">
+                            <div class="wrapper-testimonials-plates-panels-f-text">
+                                <span class="wrapper-testimonials-plates-panels-f-text-first">
+                                    You have ensured a systematic approach to our email strategy and helped <br> us
+                                    streamline all chaotic thoughts and ideas we had about our emails!
+                                </span>
+                                <span class="wrapper-testimonials-plates-panels-f-text-person">
+                                    <span style="color: #F5333F;">Natalia Pereldik,</span> <br> CEO, Funexpected Games
+                                </span>
+                            </div>
                     </div>
-                </div>
-                <div class="wrapper-testimonials-plates-panel-s">
-                    <div class="wrapper-testimonials-plates-panel-s-bg">
-                        <img class="wrapper-testimonials-plates-panel-s-mark" src="../components/icons/marks.svg"
-                            alt="">
-                        <div class="wrapper-testimonials-plates-panel-s-bg-text">
-                            <span class="wrapper-testimonials-plates-panel-s-bg-text-first">
-                                You have shown great professionalism and attention to detail when it <br> comes to email
-                                marketing!
-                            </span>
-                            <br>
-                            <span class="wrapper-testimonials-plates-panel-s-bg-text-person">
-                                <span style="color: #F5333F;">Ron Shalev</span> <br> Founder, BYB Media
-                            </span>
+                    <div class="wrapper-testimonials-plates-panels-s">
+                            <img class="wrapper-testimonials-plates-panels-s-mark" src="../components/icons/marks.svg"
+                                alt="">
+                            <div class="wrapper-testimonials-plates-panels-s-text">
+                                <span class="wrapper-testimonials-plates-panels-s-text-first">
+                                    You have shown great professionalism and attention to detail when it <br> comes to
+                                    email
+                                    marketing!
+                                </span>
+                                <br>
+                                <span class="wrapper-testimonials-plates-panels-s-text-person">
+                                    <span style="color: #F5333F;">Ron Shalev</span> <br> Founder, BYB Media
+                                </span>
                         </div>
                     </div>
                 </div>
@@ -222,6 +220,8 @@
 <script setup>
 import ButtonTransition from '../components/ButtonTransition.vue';
 
+// font-size: 84px;
+// централизовать testimonials
 </script>
 
 <style lang="scss" scoped>
@@ -264,16 +264,15 @@ import ButtonTransition from '../components/ButtonTransition.vue';
         display: flex;
         min-height: 747px;
         margin: 0 0 0 60px;
-        position: relative;
-        flex-direction: column-reverse;
+        flex-direction: column;
+        justify-content: space-evenly;
         background-image: url('../components/icons/BGfirst.png');
         background-size: 50% 100%;
         background-repeat: no-repeat;
         background-position: right;
 
         &-texts {
-            margin: 148px 0 250px 0;
-            position: absolute;
+            font-size: 64px;
 
             &-big {
                 font-size: 128px;
@@ -521,7 +520,6 @@ import ButtonTransition from '../components/ButtonTransition.vue';
                     margin: auto 100px;
                     justify-content: center;
                     flex-direction: column;
-                    align-items: flex-start;
                     color: #FFFFFF;
                     font-size: 24px;
 
@@ -537,12 +535,17 @@ import ButtonTransition from '../components/ButtonTransition.vue';
 
             &-texts {
                 display: flex;
-                justify-content: space-between;
                 margin: 40px 80px 100px 80px;
+                justify-content: space-around;
+                align-items: center;
 
                 &-first {
                     color: #FFFFFF;
                     font-size: 24px;
+                }
+
+                &-stick1 {
+                    margin: 0;
                 }
 
                 &-stick2 {
@@ -558,9 +561,8 @@ import ButtonTransition from '../components/ButtonTransition.vue';
     }
 
     &-testimonials {
-        position: relative;
         background-image: url(../components/icons/part1.png);
-        background-size: 45% 85%;
+        background-size: 45% 70%;
         background-repeat: no-repeat;
         background-position: right center;
         padding: 0 0 120px 0;
@@ -571,7 +573,6 @@ import ButtonTransition from '../components/ButtonTransition.vue';
         }
 
         &-plates {
-            width: 800px;
             margin: 0 0 120px 60px;
 
             &-title {
@@ -582,22 +583,22 @@ import ButtonTransition from '../components/ButtonTransition.vue';
                 font-weight: bold;
             }
 
-            &-panel-f {
-                display: flex;
-                align-items: center;
-                padding: 25px 30px 25px 30px;
-                margin: 60px 0 50px 0;
-                border: 1px solid #D1D1D1;
-                border-radius: 11px;
+            &-panels {
+                width: 800px;
 
-                &-mark {
-                    width: 55px;
-                    height: 55px;
-                    margin: 0 20px 0 0;
-                }
-
-                &-bg {
+                &-f {
                     display: flex;
+                    align-items: center;
+                    padding: 25px 30px 25px 30px;
+                    margin: 60px 0 50px 0;
+                    border: 1px solid #D1D1D1;
+                    border-radius: 11px;
+
+                    &-mark {
+                        width: 55px;
+                        height: 55px;
+                        margin: 0 20px 0 0;
+                    }
 
                     &-text {
                         display: flex;
@@ -610,26 +611,21 @@ import ButtonTransition from '../components/ButtonTransition.vue';
                         &-person {
                             font-size: 20px;
                         }
-
                     }
                 }
-            }
 
-            &-panel-s {
-                display: flex;
-                align-items: center;
-                padding: 25px 30px 25px 30px;
-                border: 1px solid #D1D1D1;
-                border-radius: 11px;
-
-                &-mark {
-                    width: 55px;
-                    height: 55px;
-                    margin: 0 20px 0 0;
-                }
-
-                &-bg {
+                &-s {
                     display: flex;
+                    align-items: center;
+                    padding: 25px 30px 25px 30px;
+                    border: 1px solid #D1D1D1;
+                    border-radius: 11px;
+
+                    &-mark {
+                        width: 55px;
+                        height: 55px;
+                        margin: 0 20px 0 0;
+                    }
 
                     &-text {
 
@@ -641,6 +637,7 @@ import ButtonTransition from '../components/ButtonTransition.vue';
 
                         &-person {
                             font-size: 20px;
+
                         }
                     }
                 }
@@ -678,11 +675,12 @@ import ButtonTransition from '../components/ButtonTransition.vue';
                     margin: 10px 0 0 0;
                     font-size: 24px;
                     color: #F5333F;
+                    font-weight: bold;
                 }
             }
 
             &-info {
-                margin: 100px 80px;
+                margin: 5% 80px;
 
                 &-text {
                     color: #FFFFFF;
@@ -824,12 +822,10 @@ import ButtonTransition from '../components/ButtonTransition.vue';
     .wrapper {
 
         &-offer {
-            font-size: 111px;
 
             &-texts {
-                margin: 0;
-                margin-bottom: 210px;
-                &-big{
+
+                &-big {
                     font-size: 111px;
                 }
 
@@ -843,9 +839,7 @@ import ButtonTransition from '../components/ButtonTransition.vue';
 
             &-panel {
 
-                &-texts {
-                    font-size: 111px;
-                }
+                &-texts {}
 
                 &-li {
                     font-size: 21px;
@@ -865,6 +859,10 @@ import ButtonTransition from '../components/ButtonTransition.vue';
             &-interactive {
                 margin: 0;
                 margin-bottom: 20px;
+
+                &-info {
+                    margin-top: 20px;
+                }
             }
         }
 
@@ -886,6 +884,7 @@ import ButtonTransition from '../components/ButtonTransition.vue';
                 &-texts {
                     display: flex;
                     flex-direction: column;
+                    align-items: flex-start;
 
                     &-first {
                         font-size: 21px;
@@ -914,6 +913,7 @@ import ButtonTransition from '../components/ButtonTransition.vue';
             background: none;
 
             &-plates {
+                margin-left: 5%;
 
                 margin: 0;
                 margin-left: 3%;
@@ -926,6 +926,7 @@ import ButtonTransition from '../components/ButtonTransition.vue';
                 &-panel-f {
 
                     width: 80%;
+
                     &-bg {
 
                         &-text {
@@ -944,6 +945,7 @@ import ButtonTransition from '../components/ButtonTransition.vue';
                 &-panel-s {
 
                     width: 80%;
+
                     &-bg {
 
                         &-text {
@@ -963,7 +965,7 @@ import ButtonTransition from '../components/ButtonTransition.vue';
             &-img {
                 display: block;
                 width: 80%;
-                margin: 50px 0 0 0;
+                margin-top: 50px;
             }
         }
 
@@ -978,7 +980,7 @@ import ButtonTransition from '../components/ButtonTransition.vue';
                     }
 
                     &-small {
-                        font-size: 16px;
+                        font-size: 21px;
                     }
                 }
 
@@ -1042,6 +1044,28 @@ import ButtonTransition from '../components/ButtonTransition.vue';
 @media (max-width: 1300px) {
     .wrapper {
 
+        &-offer {
+
+            &-texts {
+
+                &-big {
+                    font-size: 84px;
+                }
+
+                &-small {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        &-help {
+
+            &-panel {
+
+                &-text {}
+            }
+        }
+
         &-cards {
             margin: 0;
 
@@ -1060,6 +1084,7 @@ import ButtonTransition from '../components/ButtonTransition.vue';
 
                     &-text {
                         margin: 0;
+                        font-size: 84px;
                     }
 
                     &-li {
@@ -1074,6 +1099,17 @@ import ButtonTransition from '../components/ButtonTransition.vue';
 
             &-panel {
                 flex-direction: column;
+
+                &-title {
+
+                    &-big {
+                        font-size: 84px;
+                    }
+
+                    &-small {
+                        font-size: 18px;
+                    }
+                }
             }
         }
 

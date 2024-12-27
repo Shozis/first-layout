@@ -8,6 +8,7 @@
                 <li class="wrapper-header-list-el">Email Marketing Audit</li>
             </ul>
             <button class="wrapper-header-btn">CONTACT US</button>
+            <button class="wrapper-header-other-li"><img src="../components/icons/list.svg" alt=""></button>
         </div>
         <hr style="margin: 0;">
         <div class="wrapper-offer">
@@ -121,31 +122,31 @@
                 </span>
                 <div class="wrapper-testimonials-plates-panels">
                     <div class="wrapper-testimonials-plates-panels-f">
-                            <img class="wrapper-testimonials-plates-panels-f-mark" src="../components/icons/marks.svg"
-                                alt="">
-                            <div class="wrapper-testimonials-plates-panels-f-text">
-                                <span class="wrapper-testimonials-plates-panels-f-text-first">
-                                    You have ensured a systematic approach to our email strategy and helped <br> us
-                                    streamline all chaotic thoughts and ideas we had about our emails!
-                                </span>
-                                <span class="wrapper-testimonials-plates-panels-f-text-person">
-                                    <span style="color: #F5333F;">Natalia Pereldik,</span> <br> CEO, Funexpected Games
-                                </span>
-                            </div>
+                        <img class="wrapper-testimonials-plates-panels-f-mark" src="../components/icons/marks.svg"
+                            alt="">
+                        <div class="wrapper-testimonials-plates-panels-f-text">
+                            <span class="wrapper-testimonials-plates-panels-f-text-first">
+                                You have ensured a systematic approach to our email strategy and helped <br> us
+                                streamline all chaotic thoughts and ideas we had about our emails!
+                            </span>
+                            <span class="wrapper-testimonials-plates-panels-f-text-person">
+                                <span style="color: #F5333F;">Natalia Pereldik,</span> <br> CEO, Funexpected Games
+                            </span>
+                        </div>
                     </div>
                     <div class="wrapper-testimonials-plates-panels-s">
-                            <img class="wrapper-testimonials-plates-panels-s-mark" src="../components/icons/marks.svg"
-                                alt="">
-                            <div class="wrapper-testimonials-plates-panels-s-text">
-                                <span class="wrapper-testimonials-plates-panels-s-text-first">
-                                    You have shown great professionalism and attention to detail when it <br> comes to
-                                    email
-                                    marketing!
-                                </span>
-                                <br>
-                                <span class="wrapper-testimonials-plates-panels-s-text-person">
-                                    <span style="color: #F5333F;">Ron Shalev</span> <br> Founder, BYB Media
-                                </span>
+                        <img class="wrapper-testimonials-plates-panels-s-mark" src="../components/icons/marks.svg"
+                            alt="">
+                        <div class="wrapper-testimonials-plates-panels-s-text">
+                            <span class="wrapper-testimonials-plates-panels-s-text-first">
+                                You have shown great professionalism and attention to detail when it <br> comes to
+                                email
+                                marketing!
+                            </span>
+                            <br>
+                            <span class="wrapper-testimonials-plates-panels-s-text-person">
+                                <span style="color: #F5333F;">Ron Shalev</span> <br> Founder, BYB Media
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -257,6 +258,10 @@ import ButtonTransition from '../components/ButtonTransition.vue';
             border: none;
             border-radius: 5px;
             font-size: 20px;
+        }
+
+        &-other-li{
+            display: none;
         }
     }
 
@@ -562,9 +567,9 @@ import ButtonTransition from '../components/ButtonTransition.vue';
 
     &-testimonials {
         background-image: url(../components/icons/part1.png);
-        background-size: 45% 70%;
+        background-size: 40% 70%;
         background-repeat: no-repeat;
-        background-position: right center;
+        background-position: right bottom;
         padding: 0 0 120px 0;
         border-bottom: 1px solid #d1d1d1;
 
@@ -1148,4 +1153,37 @@ import ButtonTransition from '../components/ButtonTransition.vue';
         }
     }
 }
+
+@media (max-width: 1000px) {
+    .wrapper {
+
+        &-header{
+            &-other-li{
+                display: block;
+                border: none;
+                background: none;
+            }
+
+            &-btn{
+                display: none;
+            }
+
+            &-list{
+                display: none;
+            }
+        }
+
+        &-testimonials {
+
+            &-plates {
+
+                &-panels {
+                    margin-right: 20px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
 </style>

@@ -260,7 +260,7 @@ import ButtonTransition from '../components/ButtonTransition.vue';
             font-size: 20px;
         }
 
-        &-other-li{
+        &-other-li {
             display: none;
         }
     }
@@ -325,7 +325,7 @@ import ButtonTransition from '../components/ButtonTransition.vue';
         &-panel {
             display: flex;
             width: 95%;
-            margin: 100px 80px;
+            margin: 10% 0;
             justify-content: space-between;
             align-items: center;
             background-color: #212121;
@@ -504,7 +504,7 @@ import ButtonTransition from '../components/ButtonTransition.vue';
         border-bottom: 1px solid #d1d1d1;
 
         &-panel {
-            margin: 100px 60px;
+            margin: 3% 0;
             background-color: #212121;
             border-radius: 20px;
             width: 95%;
@@ -660,13 +660,13 @@ import ButtonTransition from '../components/ButtonTransition.vue';
 
         &-panel {
             display: flex;
-            margin: 100px 55px 100px 60px;
+            margin: 10% 0;
             background-color: #212121;
             border-radius: 20px;
             width: 95%;
 
             &-title {
-                width: 600px;
+                width: 100%;
                 margin: 100px 70px 80px;
 
                 &-big {
@@ -742,7 +742,7 @@ import ButtonTransition from '../components/ButtonTransition.vue';
     &-footer {
         display: flex;
         background-color: #212121;
-        padding: 80px 60px;
+        padding: 6% 5%;
 
         &-all {
             display: flex;
@@ -844,7 +844,9 @@ import ButtonTransition from '../components/ButtonTransition.vue';
 
             &-panel {
 
-                &-texts {}
+                &-texts {
+                    font-size: 111px;
+                }
 
                 &-li {
                     font-size: 21px;
@@ -1067,7 +1069,9 @@ import ButtonTransition from '../components/ButtonTransition.vue';
 
             &-panel {
 
-                &-text {}
+                &-text {
+                    font-size: 84px;
+                }
             }
         }
 
@@ -1077,6 +1081,70 @@ import ButtonTransition from '../components/ButtonTransition.vue';
             &-img {
                 width: 90%;
             }
+
+            &-interactive {
+
+                &-info {
+
+                    &-li {
+
+                        &-first {
+
+                            &-el1 {
+                                font-size: 18px;
+                            }
+
+                            &-el2 {
+                                font-size: 18px;
+                            }
+                        }
+
+                        &-second {
+
+                            &-el1 {
+                                font-size: 18px;
+                            }
+
+                            &-el2 {
+                                font-size: 18px;
+                            }
+                        }
+
+                        &-third {
+
+                            &-el1 {
+                                font-size: 18px;
+                            }
+
+                            &-el2 {
+                                font-size: 18px;
+                            }
+                        }
+
+                        &-fourth {
+
+                            &-el1 {
+                                font-size: 18px;
+                            }
+
+                            &-el2 {
+                                font-size: 18px;
+                            }
+                        }
+
+                        &-fifth {
+
+                            &-el1 {
+                                font-size: 18px;
+                            }
+
+                            &-el2 {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         &-care {
@@ -1084,21 +1152,23 @@ import ButtonTransition from '../components/ButtonTransition.vue';
             &-panel {
 
                 &-email {
-                    display: flex;
-                    flex-direction: column;
 
                     &-text {
-                        margin: 0;
                         font-size: 84px;
-                    }
-
-                    &-li {
-                        margin: 0;
                     }
                 }
             }
         }
 
+        &-testimonials {
+
+            &-plates {
+
+                &-title {
+                    font-size: 84px;
+                }
+            }
+        }
 
         &-last {
 
@@ -1106,6 +1176,7 @@ import ButtonTransition from '../components/ButtonTransition.vue';
                 flex-direction: column;
 
                 &-title {
+                    margin: 5%;
 
                     &-big {
                         font-size: 84px;
@@ -1157,19 +1228,34 @@ import ButtonTransition from '../components/ButtonTransition.vue';
 @media (max-width: 1000px) {
     .wrapper {
 
-        &-header{
-            &-other-li{
+        &-header {
+            &-other-li {
                 display: block;
                 border: none;
                 background: none;
             }
 
-            &-btn{
+            &-btn {
                 display: none;
             }
 
-            &-list{
+            &-list {
                 display: none;
+            }
+        }
+
+        &-care {
+
+            &-panel {
+
+                &-email {
+                    display: flex;
+                    flex-direction: column;
+
+                    &-li {
+                        margin: 0;
+                    }
+                }
             }
         }
 
@@ -1183,7 +1269,74 @@ import ButtonTransition from '../components/ButtonTransition.vue';
                 }
             }
         }
+
+        &-last {
+
+            &-panel {
+
+                &-info {
+
+                    margin: 0 5% 5% 5%;
+                }
+
+                &-title {
+                    margin: 5%;
+                }
+            }
+        }
     }
 }
 
+@media (max-width: 720px) {
+    .wrapper {
+
+        &-offer {
+            min-height: 0;
+            padding: 5% 0;
+
+            &-texts {
+
+                &-big {
+                    font-size: 48px;
+                }
+
+                &-small {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        &-line-logo {
+            padding: 20px;
+
+            &-img {
+                width: 70px;
+                height: 50%;
+
+                &:nth-child(6) {
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        &-testimonials {
+
+            &-plates {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        &-last {
+
+            &-panel {
+
+                &-title {
+                    width: 0;
+                }
+            }
+        }
+    }
+}
 </style>

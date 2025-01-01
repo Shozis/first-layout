@@ -602,7 +602,7 @@ import ButtonTransition from '../components/ButtonTransition.vue';
                     &-mark {
                         width: 55px;
                         height: 55px;
-                        margin: 0 20px 0 0;
+                        margin: 0 20px 35px 0;
                     }
 
                     &-text {
@@ -629,7 +629,7 @@ import ButtonTransition from '../components/ButtonTransition.vue';
                     &-mark {
                         width: 55px;
                         height: 55px;
-                        margin: 0 20px 0 0;
+                        margin: 0 20px 35px 0;
                     }
 
                     &-text {
@@ -1177,6 +1177,7 @@ import ButtonTransition from '../components/ButtonTransition.vue';
 
                 &-title {
                     margin: 5%;
+                    width: auto;
 
                     &-big {
                         font-size: 84px;
@@ -1229,6 +1230,7 @@ import ButtonTransition from '../components/ButtonTransition.vue';
     .wrapper {
 
         &-header {
+
             &-other-li {
                 display: block;
                 border: none;
@@ -1244,6 +1246,104 @@ import ButtonTransition from '../components/ButtonTransition.vue';
             }
         }
 
+        &-offer {
+            min-height: 0;
+            padding: 5% 0;
+            height: 450px;
+
+            &-texts {
+
+                &-big {
+                    font-size: 64px;
+                }
+            }
+        }
+
+        &-help {
+
+            &-panel {
+
+                &-text {
+                    font-size: 64px;
+                }
+
+                &-li {
+
+                    &-el {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+
+        &-card {
+
+            &-interactive {
+
+                &-info {
+
+                    &-li {
+
+                        &-first {
+
+                            &-el1 {
+                                font-size: 16px;
+                            }
+
+                            &-el2 {
+                                font-size: 16px;
+                            }
+                        }
+
+                        &-second {
+
+                            &-el1 {
+                                font-size: 16px;
+                            }
+
+                            &-el2 {
+                                font-size: 16px;
+                            }
+                        }
+
+                        &-third {
+
+                            &-el1 {
+                                font-size: 16px;
+                            }
+
+                            &-el2 {
+                                font-size: 16px;
+                            }
+                        }
+
+                        &-fourth {
+
+                            &-el1 {
+                                font-size: 16px;
+                            }
+
+                            &-el2 {
+                                font-size: 16px;
+                            }
+                        }
+
+                        &-fifth {
+
+                            &-el1 {
+                                font-size: 16px;
+                            }
+
+                            &-el2 {
+                                font-size: 16px;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
         &-care {
 
             &-panel {
@@ -1251,9 +1351,30 @@ import ButtonTransition from '../components/ButtonTransition.vue';
                 &-email {
                     display: flex;
                     flex-direction: column;
+                    margin: 5%;
+
+                    &-text {
+                        font-size: 64px;
+                    }
 
                     &-li {
                         margin: 0;
+
+                        &-el {
+                            font-size: 18px;
+                        }
+                    }
+                }
+
+                &-texts {
+                    margin: 5%;
+
+                    &-first {
+                        font-size: 18px;
+                    }
+
+                    &-second {
+                        font-size: 18px;
                     }
                 }
             }
@@ -1263,9 +1384,41 @@ import ButtonTransition from '../components/ButtonTransition.vue';
 
             &-plates {
 
+                &-title {
+                    font-size: 64px;
+                }
+
                 &-panels {
                     margin-right: 20px;
                     width: 100%;
+
+                    &-f {
+
+                        &-text {
+
+                            &-first {
+                                font-size: 18px;
+                            }
+
+                            &-person {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+
+                    &-s {
+                        &-text {
+
+                            &-first {
+                                font-size: 18px;
+                            }
+
+                            &-person {
+                                font-size: 18px;
+                            }
+                        }
+
+                    }
                 }
             }
         }
@@ -1274,13 +1427,22 @@ import ButtonTransition from '../components/ButtonTransition.vue';
 
             &-panel {
 
-                &-info {
+                &-title {
 
-                    margin: 0 5% 5% 5%;
+                    &-big {
+                        font-size: 64px;
+                    }
+                    &-small {
+                        font-size: 16px;
+                    }
                 }
 
-                &-title {
-                    margin: 5%;
+                &-info {
+                    margin: 0 5% 5% 5%;
+
+                    &-text {
+                        font-size: 16px;
+                    }
                 }
             }
         }
@@ -1291,8 +1453,6 @@ import ButtonTransition from '../components/ButtonTransition.vue';
     .wrapper {
 
         &-offer {
-            min-height: 0;
-            padding: 5% 0;
 
             &-texts {
 
@@ -1332,8 +1492,21 @@ import ButtonTransition from '../components/ButtonTransition.vue';
 
             &-panel {
 
+                &-info {
+
+                    &-sub{
+
+                        &-search{
+
+                            &-el{
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+
                 &-title {
-                    width: 0;
+                    width: auto;
                 }
             }
         }

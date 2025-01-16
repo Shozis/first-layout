@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
-import TraficLight from '@/views/TraficLight.vue';
 import Lending from '../views/Lending.vue';
+import TraficLight from '../views/TraficLight.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -37,6 +37,10 @@ const router = createRouter({
       path: '/lending',
       component: Lending
     },
+    {
+      path:'/test',
+      component: () => import('../views/Test.vue')
+    }
   ]
 })
 

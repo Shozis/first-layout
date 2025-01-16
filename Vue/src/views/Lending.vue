@@ -15,14 +15,14 @@
             <div class="wrapper-offer-texts">
                 <span class="wrapper-offer-texts-big">
                     <span style="color: red;">BOOST</span>
-                    YOUR <br> EMAIL MARKETING!
+                    YOUR EMAIL MARKETING RESULTS!
                 </span>
                 <br>
                 <span class="wrapper-offer-texts-small">
                     We help B2C brands grow their email-attributed revenue
                 </span>
             </div>
-            <ButtonTransition btn="Boost your results" />
+            <ButtonTransition class="wrapper-offer-btn" btn="Boost your results" />
         </div>
         <div class="wrapper-line-logo">
             <img class="wrapper-line-logo-img" src="../components/icons/Lev_Haolam.png" alt="">
@@ -277,10 +277,12 @@ import ButtonTransition from '../components/ButtonTransition.vue';
         background-position: right;
 
         &-texts {
+            width: 96%;
             font-size: 64px;
 
             &-big {
                 font-size: 128px;
+                font-weight: bold;
             }
 
             &-small {
@@ -288,9 +290,6 @@ import ButtonTransition from '../components/ButtonTransition.vue';
             }
         }
 
-        &-btn {
-            margin: 0 0 148px 0;
-        }
     }
 
     &-line-logo {
@@ -1226,7 +1225,7 @@ import ButtonTransition from '../components/ButtonTransition.vue';
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
     .wrapper {
 
         &-header {
@@ -1432,6 +1431,7 @@ import ButtonTransition from '../components/ButtonTransition.vue';
                     &-big {
                         font-size: 64px;
                     }
+
                     &-small {
                         font-size: 16px;
                     }
@@ -1464,6 +1464,12 @@ import ButtonTransition from '../components/ButtonTransition.vue';
                     font-size: 16px;
                 }
             }
+
+            &-btn {
+                width: 180px;
+                padding: 15px 20px;
+                font-size: 14px;
+            }
         }
 
         &-line-logo {
@@ -1494,11 +1500,11 @@ import ButtonTransition from '../components/ButtonTransition.vue';
 
                 &-info {
 
-                    &-sub{
+                    &-sub {
 
-                        &-search{
+                        &-search {
 
-                            &-el{
+                            &-el {
                                 padding: 0;
                             }
                         }
@@ -1509,6 +1515,54 @@ import ButtonTransition from '../components/ButtonTransition.vue';
                     width: auto;
                 }
             }
+        }
+    }
+}
+
+@media (max-width: 632px) {
+    .wrapper {
+        &-offer {
+            height: 350px;
+            justify-content: space-around;
+
+            &-texts {
+                display: flex;
+                height: 35%;
+                flex-direction: column;
+                justify-content: space-between;
+                font-size: 12px;
+
+                &-big {
+                    font-size: 32px;
+                }
+            }
+        }
+        &-help{
+
+            &-panel {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                &-text {
+                    font-size: 48px;
+                    align-items: flex-start;
+                }
+                &-li {
+                    margin: 0;
+                    margin-left: 20px;
+                    font-size: 18px;
+                    padding: 15px 0 15px 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 460px){
+    .wrapper {
+        &-offer {
+            height: 250px;
         }
     }
 }

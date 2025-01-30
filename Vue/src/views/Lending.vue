@@ -1537,7 +1537,8 @@ import ButtonTransition from '../components/ButtonTransition.vue';
                 }
             }
         }
-        &-help{
+
+        &-help {
 
             &-panel {
                 display: flex;
@@ -1548,6 +1549,7 @@ import ButtonTransition from '../components/ButtonTransition.vue';
                     font-size: 48px;
                     align-items: flex-start;
                 }
+
                 &-li {
                     margin: 0;
                     margin-left: 20px;
@@ -1559,10 +1561,98 @@ import ButtonTransition from '../components/ButtonTransition.vue';
     }
 }
 
-@media (max-width: 460px){
+@media (max-width: 465px) {
     .wrapper {
         &-offer {
             height: 250px;
+
+            &-texts{
+                &-big{
+                    font-size: 24px
+                }
+
+                &-small{
+                    font-size: 12px
+                }
+            }
+        }
+
+        &-help{
+            &-panel{
+                &-li{
+                    &-el{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        &-cards {
+            &-interactive {
+                &-info {
+                    &-li {
+                        &-first {
+                            &-el1{
+                                width: 60px;
+                                font-size: 12px;
+                            }
+
+                            &-el2 {
+                                margin-left: 0;
+                                font-size: 12px;
+                            }
+                        }
+
+                        &-second {
+                            &-el1{
+                                width: 60px;
+                                font-size: 12px;
+                            }
+
+                            &-el2 {
+                                margin-left: 0;
+                                font-size: 12px;
+                            }   
+                        }
+
+                        &-third {
+                            &-el1{
+                                width: 60px;
+                                font-size: 12px;
+                            }
+
+                            &-el2 {
+                                margin-left: 0;
+                                font-size: 12px;
+                            }
+                        }
+
+                        &-fourth {
+                            &-el1{
+                                width: 60px;
+                                font-size: 12px;
+                            }
+
+                            &-el2 {
+                                margin-left: 0;
+                                font-size: 12px;
+                            }
+                        }
+
+                        &-fifth {
+                            &-el1{
+                                width: 60px;
+                                font-size: 12px;
+                            }
+
+                            &-el2 {
+                                margin-left: 0;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -11,13 +11,12 @@ defineProps({
     }
 })
 
-const counter = 0;
 const reset = 0;
 
 const emits = defineEmits
 (['click']);
 
-const Onchange =( text) => {
+const Onchange =(text) => {
     emits('click', text);
 }
-</script>   1
+</script>

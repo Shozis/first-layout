@@ -18,6 +18,9 @@ const OnChange = (value) => {
     console.log(value);
     const t = Number(value);
     p.value += t;
-}
 
+    if (p.value >= 30){
+    p.value = 0;
+}
+}
 </script>

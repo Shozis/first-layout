@@ -174,8 +174,11 @@
                         <span style="color: #F5333F;">Let's join forces and make your emails shine!</span>
                     </p>
                     <div class="wrapper-last-panel-info-sub">
-                        <h2 class="wrapper-last-panel-info-sub-title">
+                        <h2 class="wrapper-last-panel-info-sub-title1">
                             Subscribe to L.U.Y.E.
+                        </h2>
+                        <h2 class="wrapper-last-panel-info-sub-title2">
+                            Subscribe to OUR newsletters
                         </h2>
                         <div class="wrapper-last-panel-info-sub-search">
                             <input class="wrapper-last-panel-info-sub-search-el" type="text" placeholder="Your Email">
@@ -693,10 +696,14 @@ import ButtonTransition from '../components/ButtonTransition.vue';
 
                 &-sub {
 
-                    &-title {
+                    &-title1 {
                         margin: 0;
                         font-size: 40px;
                         color: #FFFFFF;
+                    }
+
+                    &-title2{
+                        display: none;
                     }
 
                     &-search {
@@ -998,7 +1005,7 @@ import ButtonTransition from '../components/ButtonTransition.vue';
 
                     &-sub {
 
-                        &-title {
+                        &-title1 {
                             font-size: 32px;
                         }
 
@@ -1561,93 +1568,216 @@ import ButtonTransition from '../components/ButtonTransition.vue';
     }
 }
 
-@media (max-width: 465px) {
+@media (max-width: 485px) {
     .wrapper {
         &-offer {
             height: 250px;
+            margin-left: 5%;
 
-            &-texts{
-                &-big{
+            &-texts {
+                &-big {
                     font-size: 24px
                 }
 
-                &-small{
+                &-small {
                     font-size: 12px
                 }
             }
         }
 
-        &-help{
-            &-panel{
-                &-li{
-                    &-el{
-                        font-size: 16px;
+        &-help {
+            &-panel {
+
+                &-text {
+                    font-size: 36px
+                }
+
+                &-li {
+                    &-el {
+                        font-size: 14px;
                     }
                 }
             }
         }
 
         &-cards {
+            padding: 6%;
+
             &-interactive {
                 &-info {
+
+                    &-logo {
+                        width: 150px;
+                        height: 50px;
+                    }
+
                     &-li {
                         &-first {
-                            &-el1{
+                            &-el1 {
                                 width: 60px;
-                                font-size: 12px;
+                                font-size: 14px;
                             }
 
                             &-el2 {
                                 margin-left: 0;
-                                font-size: 12px;
+                                font-size: 14px;
                             }
                         }
 
                         &-second {
-                            &-el1{
+                            &-el1 {
                                 width: 60px;
-                                font-size: 12px;
+                                font-size: 14px;
                             }
 
                             &-el2 {
                                 margin-left: 0;
-                                font-size: 12px;
-                            }   
+                                font-size: 14px;
+                            }
                         }
 
                         &-third {
-                            &-el1{
+                            &-el1 {
                                 width: 60px;
-                                font-size: 12px;
+                                font-size: 14px;
                             }
 
                             &-el2 {
                                 margin-left: 0;
-                                font-size: 12px;
+                                font-size: 14px;
                             }
                         }
 
                         &-fourth {
-                            &-el1{
+                            &-el1 {
                                 width: 60px;
-                                font-size: 12px;
+                                font-size: 14px;
                             }
 
                             &-el2 {
                                 margin-left: 0;
-                                font-size: 12px;
+                                font-size: 14px;
                             }
                         }
 
                         &-fifth {
-                            &-el1{
+                            &-el1 {
                                 width: 60px;
-                                font-size: 12px;
+                                font-size: 14px;
                             }
 
                             &-el2 {
                                 margin-left: 0;
-                                font-size: 12px;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-care {
+            &-panel {
+                &-email {
+                    &-text {
+                        font-size: 32px;
+                    }
+
+                    &-li {
+                        &-el {
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                &-texts {
+                    &-first {
+                        font-size: 14px;
+                    }
+
+                    &-second {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        &-testimonials {
+
+            &-plates {
+                &-title {
+                    padding-top: 6%;
+                    font-size: 32px;
+                    justify-content: flex-start;
+                }
+
+                &-panels {
+
+                    &-f {
+                        margin-top: 4%;
+
+                        &-text {
+                            &-first {
+                                font-size: 14px;
+                            }
+
+                            &-person {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+
+                    &-s {
+                        &-text {
+                            &-first {
+                                font-size: 14px;
+                            }
+
+                            &-person {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-last {
+            &-panel {
+                &-title {
+                    &-big {
+                        font-size: 32px;
+                    }
+
+                    &-small {
+                        font-size: 14px;
+                    }
+                }
+
+                &-info {
+                    &-text {
+                        font-size: 14px;
+
+
+                    }
+
+                    &-sub {
+                        &-title1 {
+                            display: none;
+                        }
+
+                        &-title2{
+                            font-size: 20px;
+                            color: #FFFFFF;
+                        }
+
+                        &-search{
+                            &-el {
+                                font-size: 16px;
+                            }
+
+                            &-btn{
+                                width: 65%;
                             }
                         }
                     }
